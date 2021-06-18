@@ -1,6 +1,31 @@
+Objetivo:
+
+Desenvolver uma pequena aplicação onde os usuários possam registrar tarefas a fazer, um "TO DO LIST". O usuário também poderá fazer login e logout.
+
+Tecnologias:
+
+- Frontend: Ionic com Angular
+- Backend: API no padrão REST com Django e Django Rest Framework (Python)
+- Banco de Dados: MySQL
+
+Pontos que serão considerados:
+
+- Análise de Requisitos (Entendimento dos requisitos)
+- Clean Code (Legibilidade de código)
+- Documentação (Pode ser via comentários no código, com um readme.md na root)
+- Guia de como colocar a aplicação para rodar
+- Versionamento de código, utilizar o GitHub
+- Organização de Código
+
+Pontos extras (Opcionais):
+- Testes Unitários
+- Utilizar docker
+
+O Desafio pode ser entregue até 12:00h do dia 21/06/2021.
+
 ## Considerações iniciais
 
-Esta aplicação é um sistema de controle de tarefas.
+Esta aplicação é um sistema de controle de tarefas, solicitado pela seleção da TdCard.
 
 ## Montar o app
 
