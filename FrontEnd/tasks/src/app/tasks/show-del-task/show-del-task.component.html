@@ -1,1 +1,23 @@
-<p>show-del-task works!</p>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Tarefa</th>
+            <th>Descrição</th>
+            <th>Estatus da tarefa</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <Tbody>
+        <tr *ngFor="let task of TaskList.results">
+            <td>{{task.title}}</td>
+            <td>{{task.description}}</td>
+            <td>{{task.concluded}}</td>            
+            <td>
+                <button type="button" class="btn btn-light mr-1">Editar</button>
+                <button type="button" class="btn btn-light mr-1">Deletar</button>
+            </td>
+        </tr>
+    </Tbody>
+</table>

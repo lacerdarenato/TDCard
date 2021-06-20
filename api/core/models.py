@@ -5,7 +5,7 @@ class Task(models.Model):
 
     STATUS = (
         ('1', 'Em andamento'),
-        ('2', 'Concluido')
+        ('2', 'Concluído')
     )
 
     title = models.CharField(max_length=255)

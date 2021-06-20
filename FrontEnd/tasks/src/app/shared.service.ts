@@ -12,18 +12,18 @@ export class SharedService {
   constructor(private http: HttpClient) { }
 
   getTaskList():Observable<any[]>{
-    return this.http.get<any[]>(this.APIUrl + '/task/');
+    return this.http.get<any[]>(this.APIUrl + 'tasks/');
   }
 
   addTask(val:any){
-    return this.http.post(this.APIUrl + '/task/', val);
+    return this.http.post(this.APIUrl + 'tasks/', val);
   }
 
   updateTask(val:any){
-    return this.http.put(this.APIUrl + '/task/', val);
+    return this.http.put(this.APIUrl + 'tasks/', val);
   }
 
   deleteTask(val:any){
-    return this.http.delete(this.APIUrl + '/task/', val);
+    return this.http.delete(this.APIUrl + 'tasks/', val);
   }
 }
