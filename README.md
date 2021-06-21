@@ -4,9 +4,9 @@ Desenvolver uma pequena aplicação onde os usuários possam registrar tarefas a
 
 Tecnologias:
 
-- Frontend: Ionic com Angular
-- Backend: API no padrão REST com Django e Django Rest Framework (Python)
-- Banco de Dados: MySQL
+- [x] Frontend: Ionic com Angular
+- [x] Backend: API no padrão REST com Django e Django Rest Framework (Python)
+- [x] Banco de Dados: MySQL
 
 Pontos que serão considerados:
 
@@ -19,7 +19,7 @@ Pontos que serão considerados:
 - [x] Análise de Requisitos (Entendimento dos requisitos)
 - [x] Clean Code (Legibilidade de código) (Acredito que esteja bom :D )
 - [ ] Documentação (Pode ser via comentários no código, com um readme.md na root)
-- [ ] Guia de como colocar a aplicação para rodar
+- [x] Guia de como colocar a aplicação para rodar
 - [x] Versionamento de código, utilizar o GitHub
 - [x] Organização de Código
 
@@ -35,18 +35,20 @@ Esta aplicação é um sistema de controle de tarefas, solicitado pela seleção
 
 ## Montar o app
 
-1. Para executar o projeto é necessário clonar o repositório `git clone https://github.com/lacerdarenato/JobConvo.git` dentro do diretório em deseja instalá-lo.
-2. Instalar as dependencias contidas no arquivo reuirements.txt através do comando `pip install -r requirements.txt`
-3. Instale o MySQL e crie um banco de dados com nome db_tasks atraves do comando no terminal do MySQL  `CREATE DATABASE db_mysite;` 
-4. Executar as migrações para montar o banco
-   - `python manage migrate`
-5. Levantar o server através do comando `python manage.py runserver` 
+1. Para executar o projeto é necessário clonar o repositório `git clone https://github.com/lacerdarenato/TdCard.git` dentro do diretório em deseja instalá-lo.
+2. Instale as dependências contidas no arquivo requirements.txt através do comando `pip install -r requirements.txt`
+3. Instale o MySQL Server e crie um banco de dados com nome db_tasks através do comando no terminal do MySQL  `CREATE DATABASE db_tasks;` 
+4. Executar as migrações para montar o banco, utilizando o comando `python manage migrate`
+5. Levantar o server através do comando `python manage.py runserver`
+6. O Webservice rodará na url `http://127.0.0.1:8000/` onde receberá as requisições Http
+7. Para levantar o cliente navegue até o diretório `./FrontEnd/tasks` e execute o comando ` ng serve --open`
+8. O CLiente será executado na url `http://localhost:4200/` 
 
 
 
 ## Considerações finais.
 
-- 
+- Infelizmente não foi possível fazer os itens opcionais. 
 
 
 ## De qualquer forma e com qualquer resultado, gostaria de agradecer pela oportunidade. 
