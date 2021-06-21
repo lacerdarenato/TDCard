@@ -24,6 +24,6 @@ export class SharedService {
   }
 
   deleteTask(val:any){
-    return this.http.delete(this.APIUrl + 'tasks/', val);
+    return this.http.delete(this.APIUrl + 'tasks/' + val);
   }
 }

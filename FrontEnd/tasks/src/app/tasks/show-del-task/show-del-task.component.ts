@@ -27,14 +27,24 @@ export class ShowDelTaskComponent implements OnInit {
       description:"",
       concluded:""
     }
-    this.ModalTitle="Add Task";
+    this.ModalTitle="Adicionar Tarefa";
     this.ActivateAddEditTaskComp=true;
   }
 
   editClick(item: any){
     this.tk = item;
-    this.ModalTitle="Edit Task";
+    console.log(item);
+    this.ModalTitle="Editar Tarefa";
     this.ActivateAddEditTaskComp=true;
+  }
+
+  deleteClick(item: any){
+    if(confirm("Deseja Mesmo Deletar?")){
+      this.service.deleteTask(item.id).subscribe(data=>{
+        alert(data.toString());
+        this.refreshTaskList();
+      })
+    }
   }
 
   closeClick(){

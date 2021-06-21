@@ -22,7 +22,6 @@ export class AddEditTaskComponent implements OnInit {
     this.title = this.title;
     this.description = this.description;
     this.concluded = this.concluded;
-    console.log(this.id);
   }
 
   addTask(){
@@ -32,6 +31,7 @@ export class AddEditTaskComponent implements OnInit {
       description: this.description,
       concluded: this.concluded
     };
+    console.log(val.id);
     this.service.addTask(val).subscribe(res=>{
       alert(res.toString());
     });
@@ -44,6 +44,7 @@ export class AddEditTaskComponent implements OnInit {
       description: this.description,
       concluded: this.concluded
     };
+    console.log(val.id);
     this.service.updateTask(val).subscribe(res=>{
       alert(res.toString());
     });
