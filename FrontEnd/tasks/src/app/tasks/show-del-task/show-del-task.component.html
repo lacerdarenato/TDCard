@@ -1,8 +1,33 @@
 
+<button type="button" class="btn btn-primary float-end m-2" 
+data-bs-toggle="modal" data-bs-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+    Nova Tarefa
+  </button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+          <button type="button" class="btn-close" 
+          data-bs-dismiss="modal" aria-label="Close"
+          (click)="closeClick()">
+        </button>
+        </div>
+        <div class="modal-body">
+            <app-add-edit-task [tk]="tk" *ngIf="ActivateAddEditTaskComp"></app-add-edit-task>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Tarefa</th>
             <th>Descrição</th>
             <th>Estatus da tarefa</th>
@@ -10,12 +35,18 @@
         </tr>
     </thead>
     <Tbody>
-        <tr *ngFor="let task of TaskList.results">
+        <tr *ngFor="let task of TaskList">
+            <td>{{task.id}}</td>
             <td>{{task.title}}</td>
             <td>{{task.description}}</td>
             <td>{{task.concluded}}</td>            
             <td>
-                <button type="button" class="btn btn-light mr-1">Editar</button>
+                <button type="button" class="btn btn-light mr-1"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="editClick(task)"
+                data-backdrop="static" data-keyboard="false">
+                    Editar
+                </button>
                 <button type="button" class="btn btn-light mr-1">Deletar</button>
             </td>
         </tr>

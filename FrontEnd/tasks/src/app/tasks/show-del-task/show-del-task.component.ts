@@ -12,8 +12,35 @@ export class ShowDelTaskComponent implements OnInit {
 
   TaskList:any;
 
+  ModalTitle?: string;
+  ActivateAddEditTaskComp: boolean=false;
+  tk:any;
+
   ngOnInit(): void {
     this.refreshTaskList();
+  }
+
+  addClick(){
+    this.tk={
+      id:0,
+      title:"",
+      description:"",
+      concluded:""
+    }
+    this.ModalTitle="Add Task";
+    this.ActivateAddEditTaskComp=true;
+  }
+
+  editClick(item: any){
+    this.tk = item;
+    this.ModalTitle="Edit Task";
+    this.ActivateAddEditTaskComp=true;
+  }
+
+  closeClick(){
+    this.ActivateAddEditTaskComp=false;
+    this.refreshTaskList();
+
   }
 
   refreshTaskList(){
