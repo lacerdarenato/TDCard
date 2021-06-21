@@ -11,7 +11,7 @@ export class AddEditTaskComponent implements OnInit {
   constructor(private service:SharedService) { }
 
   @Input() tk:any;
-  id: string | undefined;
+  id: number | undefined;
   title: string | undefined;
   description: string | undefined;
   concluded: string | undefined;
@@ -37,14 +37,13 @@ export class AddEditTaskComponent implements OnInit {
     });
   }
 
-  updateTask(){
+  updateTask(item:any){
     var val = {
-      id: this.id,
+      id: item.id,
       title: this.title,
       description: this.description,
       concluded: this.concluded
     };
-    console.log(val.id);
     this.service.updateTask(val).subscribe(res=>{
       alert(res.toString());
     });

@@ -10,16 +10,22 @@ Tecnologias:
 
 Pontos que serão considerados:
 
-- Análise de Requisitos (Entendimento dos requisitos)
-- Clean Code (Legibilidade de código)
-- Documentação (Pode ser via comentários no código, com um readme.md na root)
-- Guia de como colocar a aplicação para rodar
-- Versionamento de código, utilizar o GitHub
-- Organização de Código
+- [x] Listar tarefas
+- [x] Adicionar tarefas
+- [x] Listar tarefas
+- [x] Deletar tarefas
+- [ ] Login
+- [ ] Logout
+- [x] Análise de Requisitos (Entendimento dos requisitos)
+- [x] Clean Code (Legibilidade de código) (Acredito que esteja bom :D )
+- [ ] Documentação (Pode ser via comentários no código, com um readme.md na root)
+- [ ] Guia de como colocar a aplicação para rodar
+- [x] Versionamento de código, utilizar o GitHub
+- [x] Organização de Código
 
 Pontos extras (Opcionais):
-- Testes Unitários
-- Utilizar docker
+- [ ] Testes Unitários
+- [ ] Utilizar docker
 
 O Desafio pode ser entregue até 12:00h do dia 21/06/2021.
 

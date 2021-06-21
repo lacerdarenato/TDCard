@@ -23,7 +23,6 @@ def TaskViewSet(request, id=0):
 
     elif request.method == 'PUT':
         task_data = JSONParser().parse(request)
-        print(task_data)
         task = Task.objects.get(id=task_data['id'])
         task_serializer = TaskSerializer(task, data=task_data)
         if task_serializer.is_valid():
@@ -34,4 +33,4 @@ def TaskViewSet(request, id=0):
     elif request.method == 'DELETE':
         task = Task.objects.get(id=id)
         task.delete()
-        return JsonResponse("Deletado com sucesso")
+        return JsonResponse("Deletado com sucesso", safe=False)

@@ -11,4 +11,4 @@
 </div>
 
 <button (click)="addTask()" *ngIf="tk.id == 0" class="btn btn-primary"> Nova Tarefa</button>
-<button (click)="updateTask()" *ngIf="tk.id != 0" class="btn btn-primary"> Atualizar Tarefa</button>
+<button (click)="updateTask(tk)" *ngIf="tk.id != 0" class="btn btn-primary"> Atualizar Tarefa</button>

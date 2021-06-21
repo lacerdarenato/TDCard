@@ -33,7 +33,6 @@ export class ShowDelTaskComponent implements OnInit {
 
   editClick(item: any){
     this.tk = item;
-    console.log(item);
     this.ModalTitle="Editar Tarefa";
     this.ActivateAddEditTaskComp=true;
   }
